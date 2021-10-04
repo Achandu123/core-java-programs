@@ -1,0 +1,8 @@
+static writeToken(token) {
+    let file = AssistantSetup.getAbsolutePath()+'/config/tokens.json';
+    console.log('writeToken: '+JSON.stringify(token));
+
+    jsonfile.writeFile(file, token, function(err) {
+      console.log('writeToken error: '+err);
+    })
+  }
